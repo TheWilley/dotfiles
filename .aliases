@@ -1,0 +1,3 @@
+# Configuration shortcuts
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias i3conf='nano ~/.config/i3/config'
