@@ -1,4 +1,7 @@
 #!/bin/bash
+
+git_location=/usr/bin/git
+
 # Configuration shortcuts
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='$git_location --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias i3conf='nano ~/.config/i3/config'
