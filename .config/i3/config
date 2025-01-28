@@ -215,7 +215,6 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position top
-        output nonprimary
         colors {
 		background $bg-color
 		separator #757575
