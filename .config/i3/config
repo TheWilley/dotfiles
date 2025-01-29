@@ -241,3 +241,6 @@ bindsym KP_Subtract exec amixer sset 'Master' 5%-
 
 # Wallpaper
 exec_always feh --bg-scale /home/thewilley/Pictures/3358359.jpg
+
+# Launch settings
+bindsym $mod+c exec cinnamon-settings
