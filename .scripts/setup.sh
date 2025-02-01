@@ -128,7 +128,7 @@ configure_git() {
 
 
 setup_keys
-update_apt_packages()
+update_apt_packages
 install_apt_packages
 install_flatpak_packages
 install_dotfiles
