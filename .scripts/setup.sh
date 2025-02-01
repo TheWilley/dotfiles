@@ -80,8 +80,46 @@ install_dotfiles() {
     rm -r tmpdotfiles
 }
 
+configure_git() {
+    # Define GitHub user and email as variables
+    github_user="thewilley"
+    github_email="89783791+TheWilley@users.noreply.github.com" 
+    
+    # Set Git user name and email using the variables
+    echo "Configuring Git username and email..."
+    git config --global user.name "$github_user"
+    git config --global user.email "$github_email"
+
+    # Check if SSH key exists, generate one if not
+    if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
+        echo "SSH key not found. Generating SSH key..."
+        ssh-keygen -t ed25519 -b 4096 -C "$github_email" -f "$HOME/.ssh/id_ed25519"
+        echo "SSH key generated."
+    else
+        echo "SSH key already exists."
+    fi
+
+    # Add SSH key to the SSH agent
+    echo "Adding SSH key to the SSH agent..."
+    eval "$(ssh-agent -s)"
+    ssh-add "$HOME/.ssh/id_ed25519"
+
+    # Display the SSH key to be added to GitHub
+    echo "Please add the following SSH key to your GitHub account:"
+    cat "$HOME/.ssh/id_ed25519.pub"
+
+    # Open the SSH keys page in the default browser (if you want to add it manually)
+    echo "Opening GitHub SSH keys page..."
+    xdg-open "https://github.com/settings/keys" &
+
+    # Confirming setup is complete
+    echo "Git credentials setup completed. You can now connect to GitHub using SSH!"
+}
+
+
 setup_keys
 install_apt_packages
 install_flatpak_packages
 install_dotfiles
 install_i3
+configure_git
