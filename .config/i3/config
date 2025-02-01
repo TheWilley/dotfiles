@@ -244,3 +244,7 @@ exec_always feh --bg-scale /home/thewilley/Pictures/3358359.jpg
 
 # Launch settings
 bindsym $mod+c exec cinnamon-settings
+
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
