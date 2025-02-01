@@ -6,7 +6,7 @@ Within the `.scripts` folder there is a file called "setup.sh" which can be runn
 
 ```sh
 # Get install script
-$ https://github.com/TheWilley/dotfiles/blob/master/.scripts/setup.sh
+$ wget https://github.com/TheWilley/dotfiles/blob/master/.scripts/setup.sh
 
 # Make script exectuable
 $ chmod +x setup.sh
