@@ -61,7 +61,7 @@ update_apt_packages() {
 }
 
 install_apt_packages() {
-    dependencies=("wget" "gnome-terminal" "gpg" "git" "curl" "flatpak" "rsync" "jq"  "apt-transport-https" "vivaldi-stable" "spotify-client" "code")
+    dependencies=("wget" "gnome-terminal" "convert" "gpg" "git" "curl" "flatpak" "rsync" "jq"  "apt-transport-https" "vivaldi-stable" "spotify-client" "code")
 
     install_apt_dependencies "${dependencies[@]}"
 }
