@@ -71,7 +71,7 @@ install_i3() {
 install_flatpak_packages() {
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-    flatpak_dependencies=("md.obsidian.Obsidian" "com.github.tchx84.Flatseal" "org.shotcut.Shotcut" "org.blender.Blender")
+    flatpak_dependencies=("md.obsidian.Obsidian" "com.github.tchx84.Flatseal")
     
     for dependency in "${flatpak_dependencies[@]}"; do
         if ! command_exists "$dependency"; then
