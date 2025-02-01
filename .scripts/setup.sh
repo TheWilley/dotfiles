@@ -51,13 +51,12 @@ setup_keys() {
 }
 
 install_apt_packages() {
-    dependencies=("wget" "git" "curl" "flatpak" "rsync" "vivaldi-stable" "spotify-client" )
+    dependencies=("wget" "git" "curl" "flatpak" "rsync" "jq" "vivaldi-stable" "spotify-client")
 
     install_apt_dependencies "${dependencies[@]}"
 }
 
 install_i3() {
-    # Step 1 - install dependencies via apt
     dependencies=("i3" "i3blocks" "i3lock" "rofi" "scrot")
 
     install_apt_dependencies "${dependencies[@]}"
