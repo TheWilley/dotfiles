@@ -47,10 +47,17 @@ setup_keys() {
     # Spotify
     curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
     echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list
+
+    # VS Code
+    echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+    sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+    echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+    rm -f packages.microsoft.gpg
 }
 
 install_apt_packages() {
-    dependencies=("wget" "git" "curl" "flatpak" "rsync" "jq" "vivaldi-stable" "spotify-client")
+    dependencies=("wget" "gpg" "git" "curl" "flatpak" "rsync" "jq"  "apt-transport-https" "vivaldi-stable" "spotify-client" "code")
 
     install_apt_dependencies "${dependencies[@]}"
 }
