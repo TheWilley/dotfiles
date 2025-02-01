@@ -56,6 +56,10 @@ setup_keys() {
     rm -f packages.microsoft.gpg
 }
 
+update_apt_packages() {
+    apt update && apt upgrade -y
+}
+
 install_apt_packages() {
     dependencies=("wget" "gpg" "git" "curl" "flatpak" "rsync" "jq"  "apt-transport-https" "vivaldi-stable" "spotify-client" "code")
 
@@ -124,6 +128,7 @@ configure_git() {
 
 
 setup_keys
+update_apt_packages()
 install_apt_packages
 install_flatpak_packages
 install_dotfiles
