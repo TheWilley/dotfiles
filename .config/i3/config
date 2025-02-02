@@ -230,7 +230,7 @@ bar {
 bindsym $mod+d exec rofi -show drun
 
 # lock the screen
-bindsym $mod+shift+x exec ~/.scripts/lock_and_blur.sh
+bindsym $mod+shift+x exec ~/.scripts/lock.sh
 
 # Media player controls
 bindsym KP_Enter exec playerctl play-pause
