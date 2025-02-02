@@ -19,7 +19,6 @@ install_apt_dependencies() {
         if ! command_exists "$dependency"; then
             if ! package_installed "$dependency"; then
                 echo "Installing $dependency..."
-                apt update
                 apt install -y "$dependency"
             fi
         fi
@@ -138,7 +137,6 @@ configure_git() {
     # Confirming setup is complete
     echo "Git credentials setup completed. You can now connect to GitHub using SSH!"
 }
-
 
 setup_keys
 update_apt_packages
