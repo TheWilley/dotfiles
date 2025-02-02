@@ -11,6 +11,6 @@ $ wget https://github.com/TheWilley/dotfiles/blob/master/.scripts/setup.sh
 # Make script executable
 $ chmod +x setup.sh
 
-# Run script - it's important that "sudo" is used
-sudo bash setup.sh
+# Run script - it's important that "sudo -E" is used
+sudo -E bash setup.sh
 ```
