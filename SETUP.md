@@ -88,6 +88,12 @@ rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/ &&
 rm -r tmpdotfiles
 ```
 
+## 7. Setup crontab
+
+```bash
+crontab ~/.config/cron/crontab
+```
+
 ## 8. Configure Git
 
 ```bash
