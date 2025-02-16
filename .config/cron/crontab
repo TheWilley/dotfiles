@@ -23,4 +23,4 @@
 # m h  dom mon dow   command
 
 # Backup every day at 18:00
-0 18 * * * $HOME/.config/restic/restic.sh
+0 18 * * * $HOME/.restic/restic.sh
