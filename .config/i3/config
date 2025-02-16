@@ -194,7 +194,7 @@ mode "resize" {
 }
 
 bar {
-	position top
+	position bottom
 	mode hide
 	workspace_buttons no
 }
