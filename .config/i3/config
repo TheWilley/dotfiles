@@ -155,8 +155,8 @@ bindsym Shift+Ctrl+Left workspace prev
 assign [class="Gnome-terminal"] $ws1
 exec gnome-terminal
 
-assign [class="Vivaldi-stable"] $ws2
-exec vivaldi-stable
+assign [class="firefox"] $ws2
+exec firefox
 
 assign [class="Code"] $ws3
 exec code

@@ -7,7 +7,7 @@ These instructions guide you through setting up my dotfiles for a Linux Mint ins
 
 The system can be broadly summarized as:
 
-- **Web Browsing:** Vivaldi
+- **Web Browsing:** Firefox
 - **Music Streaming:** Spotify
 - **Code Editing/Development:** VS Code
 - **Note-Taking/Knowledge Management:** Obsidian
@@ -22,13 +22,6 @@ sudo apt update && sudo apt upgrade -y
 ```
 
 ## 2. Set up Package Repositories
-
-- **Vivaldi:**
-
-```bash
-wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo gpg --dearmor | sudo dd of=/usr/share/keyrings/vivaldi-browser.gpg &&
-echo "deb [signed-by=/usr/share/keyrings/vivaldi-browser.gpg arch=$(dpkg --print-architecture)] https://repo.vivaldi.com/archive/deb/ stable main" | sudo tee /etc/apt/sources.list.d/vivaldi-archive.list
-```
 
 - **Spotify:**
 
@@ -51,7 +44,7 @@ rm -f packages.microsoft.gpg
 
 ```bash
 sudo apt update &&
-sudo apt install -y wget gnome-terminal imagemagick gpg curl flatpak rsync jq apt-transport-https vivaldi-stable spotify-client code git
+sudo apt install -y wget gnome-terminal imagemagick gpg curl flatpak rsync jq apt-transport-https firefox spotify-client code git
 ```
 
 ## 4. Install i3 and Related Tools
