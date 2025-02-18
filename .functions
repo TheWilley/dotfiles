@@ -20,3 +20,25 @@ calc() {
 	fi
 	printf "\\n"
 }
+
+# Gets size of folder
+folder_size() {
+  local folder="$1"
+
+  # Check if the folder exists and is a directory
+  if [[ ! -d "$folder" ]]; then
+    echo "Error: '$folder' is not a directory or does not exist." >&2  # Output error to stderr
+    return 1  # Return a non-zero exit code to indicate failure
+  fi
+
+  # Calculate the size using du and handle potential errors
+  local size_bytes=$(du -sh "$folder" 2>/dev/null | awk '{print $1}')
+
+  if [[ -z "$size_bytes" ]]; then
+    echo "Error: Could not calculate size for '$folder'." >&2
+    return 1
+  fi
+
+  echo "$size_bytes"  # Output the size to stdout
+  return 0 # Return 0 to indicate success
+}
