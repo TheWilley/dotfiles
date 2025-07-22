@@ -127,3 +127,8 @@ for file in ~/.{aliases,functions}; do
     fi
 done
 unset file
+. "$HOME/.cargo/env"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

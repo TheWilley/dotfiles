@@ -1,5 +1,0 @@
-@theme "/home/thewilley/.local/share/rofi/themes/spotlight-dark.rasi"
-
-configuration {
-  show-icons:         true;
-}
