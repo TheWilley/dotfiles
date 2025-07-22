@@ -1,0 +1,12 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+alt+[Semicolon]",
+    "command": "java.debug.runJavaFile"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-frontMatter.insertMedia",
+    "when": "editorTextFocus"
+  }
+]

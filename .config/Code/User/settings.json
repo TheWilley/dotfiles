@@ -1,0 +1,48 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "git.autofetch": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "breadcrumbs.enabled": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line",
+  "explorer.autoReveal": true,
+  "editor.stickyScroll.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "workbench.colorTheme": "Default Dark Modern",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prisma.showPrismaDataPlatformNotification": false,
+  "editor.formatOnSave": true,
+  "prettier.configPath": ".prettierrc",
+  "github.copilot.enable": {
+    "markdown": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[markdown]": {
+    "diffEditor.ignoreTrimWhitespace": true
+  },
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "monospace",
+  "vsicons.dontShowNewVersionMessage": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "extensions.ignoreRecommendations": true,
+  "editor.minimap.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "debug.disassemblyView.showSourceCode": false,
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}
